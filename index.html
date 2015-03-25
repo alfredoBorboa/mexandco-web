@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mex&Co.</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+<body>
+    
+<div id="header">
+<div id="logo">
+<img width="180px" src="imgs/logo.png"/>
+</div>
+<div id="menu">
+    <ul>
+        <li><a href="javascript:void(0)">quiénes somos</a></li>
+        <li><a href="javascript:void(0)">tienda</a></li>
+        <li><a href="javascript:void(0)">contacto</a></li>
+    </ul>
+</div>
+</div>
+    
+<div id="container">
+    <img src="imgs/s1.jpg"/>
+</div>
+<script>
+    
+    $( document ).ready( function(){
+        if( $( window ).width() < 1060 ){
+        $( "#container" ).width( $( window ).width() );
+        $( "#header" ).width( $( window ).width() );
+        }
+    });
+    
+    $( window ).resize( function(){
+        if( $( window ).width() < 1060 ){
+        $( "#container" ).width( $( this ).width() );
+        $( "#header" ).width( $( window ).width() );
+        }
+    });
+</script>
+</body>
+</html>
