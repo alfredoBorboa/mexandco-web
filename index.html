@@ -1,44 +1,125 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Mex&Co.</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="fontAwesome/css/font-awesome.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="js/scrollsnap/jquery.easing.min.js"></script>
+<script src="js/scrollsnap/jquery.scrollsnap.js"></script>
+<script src="js/scrollsnap/jquery.scrollstop.js"></script>
 </head>
 <body>
     
+<div id="menuMobile">
+    <ul>
+    <a href="javascript:void(0)"><li>quiénes somos</li></a>
+    <a href="javascript:void(0)"><li>catálogo</li></a>
+    <a href="javascript:void(0)"><li>tienda</li></a>
+    <a href="javascript:void(0)"><li>contacto</li></a>
+    </ul>
+</div>
+    
 <div id="header">
 <div id="logo">
-<img width="180px" src="imgs/logo.png"/>
+<img width="160px" src="imgs/logo.png"/>
 </div>
 <div id="menu">
     <ul>
-        <li><a href="javascript:void(0)">quiénes somos</a></li>
-        <li><a href="javascript:void(0)">tienda</a></li>
-        <li><a href="javascript:void(0)">contacto</a></li>
+        <a href="javascript:void(0)"><li>quiénes somos</li></a>
+        <a href="javascript:void(0)"><li>catálogo</li></a>
+        <a href="javascript:void(0)"><li>tienda</li></a>
+        <a href="javascript:void(0)"><li>contacto</li></a>
     </ul>
 </div>
+
+<div id="btnMenuMobile"><i class="fa fa-bars"></i></div>
+
 </div>
     
 <div id="container">
-    <img src="imgs/s1.jpg"/>
+    
+    <div class="seccion" style="background-image: url( imgs/s1.jpg );">
+    </div>
+    
+    <div class="seccion" style="background-image: url( imgs/fondo1.jpg );">
+        <div class="contentSeccion">MEX&Co. surge con la idea de ofrecer una nueva gama de souvenirs basados en el imaginario popular.
+Nuestro objetivo es presentar un México contemporáneo y actual, a la par de nuevas tendencias en diseño, rescantando lo mejor
+de nuestra herencia cultural y plasmándolo
+            en objetos de alta calidad a un precio accesible.</div>
+    </div>
+    
+    <div class="seccion" style="background-image: url( imgs/fondo1.jpg );">
+        <div class="contentSeccion" style="margin-top:30px">
+        <h1>1</h1>
+        Postal de papel picado<br><br>
+        19.5cm x 14.5 cm<br>
+        <i>extendida</i> 19.5cm x 29cm<br><br>
+        <img src="imgs/1_postal_picado.png"/><br>
+        colores:<br>
+        <img src="imgs/1_colores_postal_picado.png"/>
+        </div>
+    </div>
+    
 </div>
 <script>
     
+    var limite = $( window ).height() / 2;
+    
+    $(document).scrollsnap({
+        snaps: '.seccion',
+        proximity: limite
+    });
+    
     $( document ).ready( function(){
-        if( $( window ).width() < 1060 ){
-        $( "#container" ).width( $( window ).width() );
-        $( "#header" ).width( $( window ).width() );
+        $( ".seccion" ).width( $( window ).width() );
+        $( ".seccion" ).height( $( window ).height() );
+        
+        if( $( window ).width() < 620 ){
+            $( "#menu" ).hide();
+            $( "#btnMenuMobile" ).show();
         }
+        else{
+            $( "#menu" ).show();
+            $( "#btnMenuMobile" ).hide();
+            $( "#menuMobile" ).hide();
+        }
+        
+        $( "#btnMenuMobile").click( function(){
+            $( "#menuMobile" ).fadeToggle();
+        });
+        
+        $( "li" ).hover( function(){
+            $( this ).animate({ opacity: 0.5 }, 200 );
+        }, function(){
+            $( this ).animate({ opacity: 1.0 }, 100 ); 
+        });
+        
+        $( "#menuMobile").children( "ul").children( "a" ).click( function(){
+            $( "#menuMobile" ).fadeOut( "fast" );
+        });
+        
     });
     
     $( window ).resize( function(){
-        if( $( window ).width() < 1060 ){
-        $( "#container" ).width( $( this ).width() );
-        $( "#header" ).width( $( window ).width() );
+        
+        $( ".seccion" ).width( $( window ).width() );
+        $( ".seccion" ).height( $( window ).height() );
+        
+        if( $( window ).width() < 620 ){
+            $( "#menu" ).hide();
+            $( "#btnMenuMobile" ).show();
         }
+        else{
+            $( "#menu" ).show();
+            $( "#btnMenuMobile" ).hide();
+            $( "#menuMobile" ).hide();
+        }
+        
     });
+    
 </script>
 </body>
 </html>
