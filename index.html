@@ -6,32 +6,35 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="fontAwesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="colorbox.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="js/scrollsnap/jquery.easing.min.js"></script>
 <script src="js/scrollsnap/jquery.scrollsnap.js"></script>
 <script src="js/scrollsnap/jquery.scrollstop.js"></script>
+<script src="js/jquery.colorbox-min.js"></script>
+<script src="js/jquery.scrollTo.min.js"></script>
 </head>
 <body>
     
 <div id="menuMobile">
     <ul>
-    <a href="javascript:void(0)"><li>quiénes somos</li></a>
-    <a href="javascript:void(0)"><li>catálogo</li></a>
-    <a href="javascript:void(0)"><li>tienda</li></a>
-    <a href="javascript:void(0)"><li>contacto</li></a>
+    <a id="linkQuienes2" href="javascript:void(0)"><li>quiénes somos</li></a>
+    <a id="linkCatalogo2" href="javascript:void(0)"><li>catálogo</li></a>
+    <a id="linkTienda2" href="javascript:void(0)"><li>tienda</li></a>
+    <a id="linkContacto2" href="javascript:void(0)"><li>contacto</li></a>
     </ul>
 </div>
     
 <div id="header">
 <div id="logo">
-<img width="160px" src="imgs/logo.png"/>
+    <a id="linkHome" href="javascript:void(0)"><img width="160px" src="imgs/logo.png"/></a>
 </div>
 <div id="menu">
     <ul>
-        <a href="javascript:void(0)"><li>quiénes somos</li></a>
-        <a href="javascript:void(0)"><li>catálogo</li></a>
-        <a href="javascript:void(0)"><li>tienda</li></a>
-        <a href="javascript:void(0)"><li>contacto</li></a>
+        <a id="linkQuienes" href="javascript:void(0)"><li>quiénes somos</li></a>
+        <a id="linkCatalogo" href="javascript:void(0)"><li>catálogo</li></a>
+        <a id="linkTienda" href="javascript:void(0)"><li>tienda</li></a>
+        <a id="linkContacto" href="javascript:void(0)"><li>contacto</li></a>
     </ul>
 </div>
 
@@ -41,26 +44,75 @@
     
 <div id="container">
     
-    <div class="seccion" style="background-image: url( imgs/s1.jpg );">
+    <div class="seccion" id="home" style="background-image: url( imgs/s1.jpg );">
     </div>
     
-    <div class="seccion" style="background-image: url( imgs/fondo1.jpg );">
+    <div class="seccion" id="quienes" style="background-image: url( imgs/fondo1.jpg );">
         <div class="contentSeccion">MEX&Co. surge con la idea de ofrecer una nueva gama de souvenirs basados en el imaginario popular.
 Nuestro objetivo es presentar un México contemporáneo y actual, a la par de nuevas tendencias en diseño, rescantando lo mejor
 de nuestra herencia cultural y plasmándolo
             en objetos de alta calidad a un precio accesible.</div>
     </div>
     
-    <div class="seccion" style="background-image: url( imgs/fondo1.jpg );">
+    <div class="seccion" id="catalogo" style="background-image: url( imgs/fondo1.jpg );">
         <div class="contentSeccion" style="margin-top:30px">
-        <h1>1</h1>
-        Postal de papel picado<br><br>
-        19.5cm x 14.5 cm<br>
+            <h1>1</h1> <br><br><br>
+            <span class="nombreProducto">Postal de papel picado</span><a class="galeria1" rel="gal1" href="imgs/gal1/1.jpg"><div class="botGal">galería</div></a><br><br>
+            <a class="galeria1" rel="gal1" href="imgs/gal1/2.jpg"></a>
+            <a class="galeria1" rel="gal1" href="imgs/gal1/3.jpg"></a>
+            <a class="galeria1" rel="gal1" href="imgs/gal1/4.jpg"></a>
+        19.5cm x 14.5cm<br>
         <i>extendida</i> 19.5cm x 29cm<br><br>
         <img src="imgs/1_postal_picado.png"/><br>
         colores:<br>
         <img src="imgs/1_colores_postal_picado.png"/>
         </div>
+    </div>
+    
+    <div class="seccion" style="background-image: url( imgs/fondo1.jpg );">
+        <div class="contentSeccion" style="margin-top:30px">
+        <h1>2</h1><br><br><br>
+            <span class="nombreProducto">Tarjeta de papel picado</span><a class="galeria2" rel="gal2" href="imgs/gal2/1.jpg"><div class="botGal">galería</div></a><br><br>
+            <a class="galeria2" rel="gal2" href="imgs/gal2/2.jpg"></a>
+        11.3cm x 8.5cm<br>
+        <i>extendida</i> 11.3cm x 16.9cm<br><br>
+        <img src="imgs/2_tarjeta_picado.png"/><br>
+        colores:<br>
+        <img src="imgs/2_colores_tarjeta_picado.png"/>
+        </div>
+    </div>
+    
+    <div class="seccion" style="background-image: url( imgs/fondo1.jpg );">
+        <div class="contentSeccion" style="margin-top:30px">
+        <h1>3</h1><br><br><br>
+        <span class="nombreProducto">Cartel de papel picado</span><a class="galeria3" rel="gal3" href="imgs/gal3/1.jpg"><div class="botGal">galería</div></a><br><br>
+        <a class="galeria3" rel="gal3" href="imgs/gal3/2.jpg"></a>
+        <a class="galeria3" rel="gal3" href="imgs/gal3/3.jpg"></a>
+        55cm x 38cm<br>
+        <img src="imgs/3_cartel_picado.png"/><br>
+        colores:<br>
+        <img src="imgs/3_colores_cartel_picado.png"/>
+        </div>
+    </div>
+    
+    <div class="seccion" id="tienda" style="background-image: url( imgs/fondo1.jpg );">
+        <!--<div class="contentSeccion">-->
+            <!-- Agregar ID de tienda -->
+	<iframe src="https://www.kichink.com/stores/id/23102" width="100%" height="100%"  frameborder="0">
+	<div style="width:300px; font-size:20px;">
+		Tu navegador no permite mostrar la tienda en esta ventana. 
+	<!-- Agregar ID de tienda -->
+		<a href="https://www.kichink.com/stores/23102">Haz clic para abrira en una nueva ventana.</a>
+	</div>
+	</iframe>
+        <!--</div>-->
+    </div>
+    
+    <div class="seccion" id="contacto" style="background-image: url( imgs/fondo1.jpg );">
+        <div class="contentSeccion"><span style="color:#f69">Contacto</span><br><br>
+        Santiago Fernández Alva<br>
+        044 55 2095 0691<br>
+        <a href="mailto:santiagofernandezalva@gmail.com">santiagofernandezalva@gmail.com</a></div>
     </div>
     
 </div>
@@ -74,6 +126,83 @@ de nuestra herencia cultural y plasmándolo
     });
     
     $( document ).ready( function(){
+        
+        $( ".galeria1" ).colorbox(
+            {
+                rel: 'gal1',
+                maxWidth: '90%',
+                maxHeight: '90%',
+                onOpen: function(){
+                    $( "body" ).css( "overflow", "hidden" );
+                },
+                onClosed: function(){
+                    $( "body" ).css( "overflow", "auto" );
+                }
+            });
+        
+        $( ".galeria2" ).colorbox(
+            {
+                rel: 'gal2',
+                maxWidth: '90%',
+                maxHeight: '90%',
+                onOpen: function(){
+                    $( "body" ).css( "overflow", "hidden" );
+                },
+                onClosed: function(){
+                    $( "body" ).css( "overflow", "auto" );
+                }
+            });
+        
+        $( ".galeria3" ).colorbox(
+            {
+                rel: 'gal3',
+                maxWidth: '90%',
+                maxHeight: '90%',
+                onOpen: function(){
+                    $( "body" ).css( "overflow", "hidden" );
+                },
+                onClosed: function(){
+                    $( "body" ).css( "overflow", "auto" );
+                }
+            });
+        
+        $( "#linkHome" ).click( function(){
+            $( "body" ).scrollTo( "#home", 1500 );
+        });
+        
+        $( "#linkQuienes" ).click( function(){
+            $( "body" ).scrollTo( "#quienes", 1500 );
+        });
+        
+        $( "#linkCatalogo" ).click( function(){
+            $( "body" ).scrollTo( "#catalogo", 1500 );
+        });
+        
+        $( "#linkTienda" ).click( function(){
+            $( "body" ).scrollTo( "#tienda", 1500 );
+        });
+        
+        $( "#linkContacto" ).click( function(){
+            $( "body" ).scrollTo( "#contacto", 1500 );
+        });
+        
+        $( "#linkQuienes2" ).click( function(){
+            $( "body" ).scrollTo( "#quienes", 1500 );
+        });
+        
+        $( "#linkCatalogo2" ).click( function(){
+            $( "body" ).scrollTo( "#catalogo", 1500 );
+        });
+        
+        $( "#linkTienda2" ).click( function(){
+            $( "body" ).scrollTo( "#tienda", 1500 );
+        });
+        
+        $( "#linkContacto2" ).click( function(){
+            $( "body" ).scrollTo( "#contacto", 1500 );
+        });
+        
+        
         $( ".seccion" ).width( $( window ).width() );
         $( ".seccion" ).height( $( window ).height() );
         

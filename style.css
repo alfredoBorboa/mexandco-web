@@ -8,6 +8,9 @@ body{
 
 h1{
     font-size: 55px;
+    width:inherit;
+    display:inline;
+    line-height: 55px;
 }
 
 #container{
@@ -36,7 +39,7 @@ box-shadow: 1px 2px 13px -1px rgba(0,0,0,0.43);
     width:100%;
     height: 60px;
     background-color: #F2F2F2;
-    z-index: 999;
+    z-index: 99;
     left:50%;
     transform: translate(-50%, 0%);
     border-bottom: 1px solid #CACACA;
@@ -158,7 +161,7 @@ box-shadow: 1px 2px 13px -1px rgba(0,0,0,0.43);
 }
 
 .contentSeccion{
-    max-width: 500px;
+    max-width: 600px;
     min-width:200px;
     padding: 40px;
     margin: 20% auto;
@@ -170,4 +173,33 @@ box-shadow: 1px 2px 13px -1px rgba(0,0,0,0.43);
 
 .contentSeccion img{
     width:100%;
+}
+
+.contentSeccion a{
+    color:#000;
+    text-decoration:none;
+}
+
+.contentSeccion a:hover{
+    color:#555;
+}
+
+.contentSeccion a .botGal:hover{
+    background-color:#DEDEDE;
+}
+
+.botGal{
+    border: 1px solid #000;
+    background-color:#FFF;
+    padding:5px;
+    float:right;
+    display: inline;
+    font-size: 13px;
+    letter-spacing:0.07em;
+    font-weight: light;
+}
+
+.nombreProducto{
+    font-size:23px;
+    line-height: 23px;
 }
