@@ -1,9 +1,13 @@
 body{
+    position: absolute;
     margin:0;
     padding:0;
     font-family: 'Lato', sans-serif;
     /*background-image: url(imgs/tile.jpg);*/
-    background-color: #FFF;
+    background-color: #F00;
+    left:0;
+    right:0;
+    top:0;
 }
 
 h1{
@@ -15,15 +19,10 @@ h1{
 
 #container{
     position:absolute;
-    width:100%;
+    left:0;
+    right:0;
     background-color: #FFF;
-    left:50%;
     top: 0px;
-    transform: translate(-50%, 0%);
-    -webkit-box-shadow: 1px 2px 13px -1px rgba(0,0,0,0.43);
--moz-box-shadow: 1px 2px 13px -1px rgba(0,0,0,0.43);
-box-shadow: 1px 2px 13px -1px rgba(0,0,0,0.43);
-    
 }
 
 .seccion{
@@ -36,12 +35,11 @@ box-shadow: 1px 2px 13px -1px rgba(0,0,0,0.43);
 
 #header{
     position:fixed;
-    width:100%;
+    left:0;
+    right:0;
     height: 60px;
     background-color: #F2F2F2;
     z-index: 99;
-    left:50%;
-    transform: translate(-50%, 0%);
     border-bottom: 1px solid #CACACA;
 }
 
